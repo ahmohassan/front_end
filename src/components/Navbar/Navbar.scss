@@ -1,0 +1,104 @@
+.app__navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: fixed;
+    z-index: 2;
+}
+.app__navbar-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+        width: 90px;
+        height: 20px;
+        @media screen And(min-width:2000px) {
+            width: 180px;
+            height: 40;
+        }
+    }
+}
+
+.app__navbar-link{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    li{
+        margin: 0 1rem;
+        cursor: pointer;
+        flex-direction: column;
+        div{
+            width: 5px;
+            height: 5px;
+            background: transparent;
+            border-radius: 50%;
+            margin-bottom: 5px;
+
+        }
+        a{
+            color: var(--gray-color);
+            text-decoration: none;
+            flex-direction: column;
+
+            transform: uppercase;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                transform: scale(1.1);
+                color: var(--secondary-color);
+            }
+            
+        }
+        &:hover{
+            div{
+                background: var(--secondary-color);
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+
+}
+.app__navbar-menu{
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: blue;
+
+   svg{
+        width: 70%;
+        height: 70%;
+        background: var(--white-color);
+   }
+   div{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    padding: 1rem;
+    width: 80%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    background: url('../../constants/assets/bgWhite.png');
+   }
+}
