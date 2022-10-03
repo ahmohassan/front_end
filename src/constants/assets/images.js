@@ -19,8 +19,14 @@ import git from './git.png'
 import graphql from './graphql.png'
 import html from './html.png'
 import logo from './logo.png'
+import profile from './profile.png'
+import sass from './sass.png'
+import redux from './redux.png'
 
 export default {
+   sass,
+   redux,
+   profile,
    logo,
    about1,
    about2,

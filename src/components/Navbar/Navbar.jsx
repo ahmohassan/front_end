@@ -25,29 +25,53 @@ function Navbar() {
             )
         }
       </ul>
-      <div className=".app__navbar-menu">
+      <div className="app__navbar-menu">
         <HiMenuAlt4 onClick = {()=>setToggle(true)} className ="" />
 
         {
-          toggle && (
-            <motion.div whileInView={{x:[300,0]}}
-              transition={{duration:0.85, ease: 'easeOut'}}
-            >
-              <Hix onClick = {()=>setToggle(false)}  />
+          toggle &&(
+             <motion.div
+              whileInView={{x: [300,0]}}
+              transition={{duration:1.5, ease: 'easeInOut'}}
+             >
+              <ul>
+              {/* <Hix onClick = {()=>setToggle(false)}  /> */}
+              <button onClick = {()=>setToggle(false)}>X</button>
 
-              {
-                ['home','About','work','skills','constants'].map(
-                    (item)=>(
-                      <li className='app__flex' key={item}>
-                       
-                        <a href={`#{item}`} onClick = {()=>setToggle(false)}  rel="noopener noreferrer">{item}</a>
-                      </li>
-                    )
-                  )
-              }
-
+                {
+                    ['home','About','work','skills','constants'].map(
+                        (item)=>(
+                          <li  key={item}>
+                          
+                            <a href={`#${item}`} onClick = {()=>setToggle(true)}  >{item}</a>
+                          </li>
+                        )
+                      )
+                  }
+              </ul>
             </motion.div>
           )
+          // toggle && (
+          //   <motion.div 
+          //   whiLeInView ={{x:[300, 0]}}
+          //   // whiLeInView={{x:[300,0]}}
+          //     transition={{duration:0.85, ease: 'easeOut'}}
+          //   >
+          //     <Hix onClick = {()=>setToggle(false)}  />
+
+          //     {
+          //       ['home','About','work','skills','constants'].map(
+          //           (item)=>(
+          //             <li className='app__flex' key={item}>
+                       
+          //               <a href={`#{item}`} onClick = {()=>setToggle(false)}  rel="noopener noreferrer">{item}</a>
+          //             </li>
+          //           )
+          //         )
+          //     }
+
+          //   </motion.div>
+          // )
         }
       </div>
     </nav>

@@ -160,7 +160,6 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background-color: #cbcbcb;
       margin: 0.5rem;
   
       transition: background-color 0.2s ease-in-out;
@@ -175,7 +174,12 @@
       }
     }
   }
-  
+  .activeColor{
+    background-color: red;
+  }
+  .inactiveColor{
+    background-color: yellow;
+  }
   @media screen and (max-width: 500px) {
     .app__navigation,
     .app__social {
