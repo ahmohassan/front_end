@@ -175,10 +175,10 @@
     }
   }
   .activeColor{
-    background-color: red;
+    background-color: var(--secondary-color);
   }
   .inactiveColor{
-    background-color: yellow;
+    background-color: var(--lightGray-color);
   }
   @media screen and (max-width: 500px) {
     .app__navigation,

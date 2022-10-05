@@ -15,11 +15,11 @@ function Navbar() {
       </div>
       <ul className='app__navbar-link'>
         {
-          ['home','About','work','skills','constants'].map(
+          ['home','about','works','skills','constants'].map(
               (item)=>(
                 <li className='app__flex' key={`link${item}`}>
                   <div></div>
-                  <a href={`#{item}`} target="_blank" rel="noopener noreferrer">{item}</a>
+                  <a href={`#${item}`}  rel="noopener noreferrer">{item}</a>
                 </li>
               )
             )
