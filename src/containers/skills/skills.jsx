@@ -3,7 +3,7 @@ import './skills.scss'
 import {motion} from 'framer-motion'
 import { urlFor, client } from '../../client/client'
 import ReatTooltip from 'react-tooltip'
-import {Appwrap} from '../../wrapper'
+import {Appwrap, MotionWrap} from '../../wrapper'
 
 function Skills() {
 
@@ -70,7 +70,7 @@ function Skills() {
          className='app__skills-exp'
         >
           {
-            experiences.map(
+            experiences?.map(
               (item)=>(
                 <>
                 <motion.div 
@@ -82,30 +82,50 @@ function Skills() {
                     </div>
                     {/* //Fix here */}
                     <motion.div className='app__skills-exp-works'>
+                        {/* d */}
 
+                        {
+                          item?.works?.map(
+                            (data)=>(
+                                <>
+                                <motion.div
+                                whileInView={{opacity:[0,1]}}
+                                transition={{duration:0.5}}
+                                key={data.name} 
+                                className='app__skills-exp-work'
+                                data-tip
+                                data-for={
+                                  data.name
+                                }
+                                >
+                                  <h4 className="bold-text">{data.name}</h4>
+                                  <p className="p-text">
+                                    {data.company}
+                                  </p>
+                                </motion.div>
+                                <ReatTooltip
+                                  id={data.name}
+                                  effect="solid"
+                                  className="app__skills-tooltip"
+
+                                >
+                                  {data.desc}
+
+                                </ReatTooltip>
+                              </>
+                            )
+                          )
+                        }
+
+
+
+                        {/* d */}
                     </motion.div>
                 </motion.div>
                 </>
               )
             )
-            // experiences.works.map(
-            //   (work)=>(
-            //     <>
-            //       <motion.div
-            //        whileInView={{opacity:[0,1]}}
-            //        transition={{duration:0.5}}
-            //        key={work.name} 
-            //        className='app__skills-exp-work'
-            //       //  data-tip
-            //        data-for={
-            //         work.name
-            //        }
-            //       >
-
-            //       </motion.div>
-            //     </>
-            //   )
-            // )
+           
           }
         </motion.div>
       </div>
@@ -113,4 +133,8 @@ function Skills() {
   )
 }
 
-export default Appwrap(Skills , 'skills','skills')
+export default Appwrap(
+  MotionWrap(Skills , 'app__skills') , 
+  'skills',
+  'app__whitebg'
+)

@@ -3,7 +3,7 @@ import './works.scss'
 import {motion} from 'framer-motion'
 import { urlFor, client } from '../../client/client'
 import {AiFillEye, AiFillGithub} from 'react-icons/ai'
-import {Appwrap} from '../../wrapper'
+import {Appwrap, MotionWrap} from '../../wrapper'
 
 function WorksApp() {
 
@@ -149,4 +149,8 @@ function WorksApp() {
   )
 }
 
-export default Appwrap(WorksApp , 'works', "works")
+export default Appwrap(
+  MotionWrap(WorksApp , 'app__works') , 
+  'works', 
+  "app__primarybg"
+)
