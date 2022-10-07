@@ -6,7 +6,6 @@ import './App.scss'
 const App = () => {
   return (
     <div className='app '>
-      {/* <h1>Skills</h1> */}
       <Navbar/>
       <Header/>
       <About />
