@@ -5,6 +5,7 @@ import { urlFor, client } from '../../client/client'
 import ReatTooltip from 'react-tooltip'
 import {Appwrap, MotionWrap} from '../../wrapper'
 
+
 function Skills() {
 
   const [experiences, setExperiences] = useState([])

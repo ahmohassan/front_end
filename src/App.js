@@ -7,11 +7,11 @@ const App = () => {
   return (
     <div className='app '>
       {/* <h1>Skills</h1> */}
-      <Navbar/>
+      {/* <Navbar/>
       <Header/>
       <About />
       <Works /> 
-      <Skills />
+      <Skills /> */}
       <Testimonial />
       <Footer />
     </div>

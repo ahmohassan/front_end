@@ -1,0 +1,158 @@
+.app__testimonial{
+   flex: 1;
+   flex-direction: column;
+   width: 100%;
+      
+}
+.app__testimonial-item{
+    justify-content: center;
+    width: 60%;
+    min-height: 320px;
+    background-color: var(--white-color);
+    padding: 2rem;
+    display: flex;
+    font-size: 3rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    img{
+        // background-color: var(--secondary-color);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    @media screen and (min-width: 2000px){
+        display: flex;;
+        flex-direction: row;
+        min-height: 450px;
+        img{
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    @media screen and (max-width: 850px){
+        flex-direction: column;;
+        margin: 1rem;
+        width: 100%;
+    }
+    @media screen and (min-width: 600px){
+        flex-direction: column;
+        margin: 2rem;
+
+    }
+
+}
+.app__testimonial-content{
+    flex: 1;
+    height: 100%;
+
+    padding: 0 2rem;
+    text-align: left;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+    p{
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: var(--black-color);
+        font-family: var(--font-base);
+
+        
+ 
+    }
+    h4{
+        font-size: larger;
+        font-weight: 900;
+        text-align: center;
+        color: var(--secondry-color);
+        margin-top: 0.5rem;;
+ 
+    }
+    h5{
+        font-size: smaller;
+        text-align: center;
+        font-weight: 100;
+        color: var(--gray-color);
+        margin-top: 50px;
+    }
+ 
+
+}
+
+.app__testimonial-btns{
+    flex-direction: row;
+    margin: 1rem;
+
+    div{
+        width: 50px;
+        height: 50px;
+
+        margin: 1rem;
+        transition: all 0.9s ease-in-out;
+
+        border-radius: 50%;
+        background-color: var(--white-color);
+
+
+        svg{
+            width: 20px;
+            height: 20px;
+
+            color: var(--secondary-color );
+        }
+
+        &:hover{
+            background-color: var(--secondary-color);
+
+            svg{
+                color: var(--white-color);
+            }
+        }
+
+    }
+}
+
+.app__testimonial-brands{
+    width: 80%;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    div{
+        width: 150px;
+        margin: 1.5rem;
+        img{
+
+            height: auto;
+            width: 100%;
+
+            object-fit: cover;
+            filter: grayscale(2);
+        }
+
+        &:hover{
+            img{
+                filter: grayscale(0);
+            }
+        }
+
+        @media screen and (min-width: 2000px) {
+            width: 210px;
+            margin: 2rem;
+        }
+        @media screen and (max-width: 450px) {
+            display: flex;
+            width: 120px;
+            margin: 1rem;
+        }
+    }
+    
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        margin: 1rem;
+    }
+    
+}

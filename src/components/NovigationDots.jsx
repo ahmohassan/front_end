@@ -7,7 +7,7 @@ function NovigationDots({active}) {
   return (
     <div className='app__navigation'>
         {
-            ['home','about','works','skills','Testimonials','constants'].map(
+            ['home','about','works','skills','Testimonial','constants'].map(
             (item, index )=>(
                 
                 <a 
